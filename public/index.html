@@ -900,7 +900,7 @@ async function getNotesByTag(tag) {
     try {
 
         const res = await fetch(
-            `http://localhost:8080/notes/tag/${encodeURIComponent(tag)}`,
+            `${BASE}/notes/tag/${encodeURIComponent(tag)}`,
             {   method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
@@ -922,7 +922,7 @@ async function getNotesByMultipleTags(tags) {
     try {
         const joinedTags = tags.join(',');
         const res = await fetch(
-            `http://localhost:8080/notes/tags/${encodeURIComponent(joinedTags)}`,
+            `${BASE}/notes/tags/${encodeURIComponent(joinedTags)}`,
             {method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
@@ -942,7 +942,7 @@ async function getNotesByMultipleTags(tags) {
 async function getPinnedNotes() {
     try {
         const res = await fetch(
-            'http://localhost:8080/notes/pinned',
+            `${BASE}/notes/pinned`,
             {  method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
@@ -962,7 +962,7 @@ async function getPinnedNotes() {
 async function getArchivedNotes() {
     try {
         const res = await fetch(
-            'http://localhost:8080/notes/archived',
+            `${BASE}/notes/archived`,
             { method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
@@ -1044,7 +1044,7 @@ async function handleTagSearchSubmit(event) {
 async function deleteNote(id) {
     try {
         const res = await fetch(
-            `http://localhost:8080/notes/${id}`,
+            `${BASE}/notes/${id}`,
             {
                 method: 'DELETE',
                 headers: {
