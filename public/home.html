@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Notes</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+      overflow:hidden;
+    }
+
+    .container{
+      width:90%;
+      max-width:450px;
+      padding:50px 35px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.15);
+      box-shadow:0 8px 30px rgba(0,0,0,0.4);
+      text-align:center;
+      color:white;
+    }
+
+    .logo{
+      width:85px;
+      height:85px;
+      margin:0 auto 20px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#38bdf8,#6366f1);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:35px;
+      font-weight:bold;
+      box-shadow:0 0 20px rgba(99,102,241,0.6);
+    }
+
+    h1{
+      font-size:38px;
+      margin-bottom:15px;
+      letter-spacing:1px;
+    }
+
+    p{
+      color:#cbd5e1;
+      line-height:1.6;
+      margin-bottom:35px;
+      font-size:15px;
+    }
+
+    .btn-group{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .btn{
+      padding:15px;
+      border:none;
+      border-radius:12px;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s ease;
+      text-decoration:none;
+      display:block;
+    }
+
+    .login-btn{
+      background:#6366f1;
+      color:white;
+    }
+
+    .login-btn:hover{
+      background:#4f46e5;
+      transform:translateY(-3px);
+    }
+
+    .signup-btn{
+      background:transparent;
+      border:2px solid #38bdf8;
+      color:#38bdf8;
+    }
+
+    .signup-btn:hover{
+      background:#38bdf8;
+      color:#0f172a;
+      transform:translateY(-3px);
+    }
+
+    .footer{
+      margin-top:30px;
+      font-size:13px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:500px){
+
+      .container{
+        padding:40px 25px;
+      }
+
+      h1{
+        font-size:30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">🔐</div>
+
+    <h1>Secure Notes</h1>
+
+    <p>
+      Privacy-first encrypted note storage with
+      end-to-end encryption and zero-knowledge architecture.
+    </p>
+
+    <div class="btn-group">
+
+      <a href="login.html" class="btn login-btn">
+        Login
+      </a>
+
+      <a href="register.html" class="btn signup-btn">
+        Create Account
+      </a>
+
+    </div>
+
+    <div class="footer">
+      Your notes. Your keys. Your privacy.
+    </div>
+
+  </div>
+
+</body>
+</html>
